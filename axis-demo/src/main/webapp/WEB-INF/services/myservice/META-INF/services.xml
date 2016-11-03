@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<service name="AxisService">    
+    <description>AxisService</description>    
+    <parameter name="ServiceClass">    
+        Axis2Service.service.Calculate    
+    </parameter>    
+    <operation name="sum">    
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />    
+    </operation>    
+</service>    
