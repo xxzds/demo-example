@@ -8,6 +8,7 @@
   	<module>demo-Axis2</module>
   	<module>axis-demo</module>
   	<module>axisWebServiceClient</module>
+  	<module>xxl-job-master</module>
   </modules>
   
   <properties>

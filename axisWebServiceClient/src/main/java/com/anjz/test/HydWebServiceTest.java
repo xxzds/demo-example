@@ -101,8 +101,8 @@ public class HydWebServiceTest {
 			rc.setAmt("5000");
 			rc.setType("0");
 			rc.setFlag("1");
-//			rc.setLoanTurnIds("42c7416930a14c9d82bbc4df44c0d2f2|a043b283a541451aabcf39a95a84a98f");
-//			rc.setLoanTurnId("42c7416930a14c9d82bbc4df44c0d2f2");
+			rc.setLoanTurnIds("42c7416930a14c9d82bbc4df44c0d2f2|a043b283a541451aabcf39a95a84a98f");
+			rc.setLoanTurnId("42c7416930a14c9d82bbc4df44c0d2f2");
 			rc.setChannel("00");
 			rc.setTranDes("123号码");
 			rc.setTranNo("123");
