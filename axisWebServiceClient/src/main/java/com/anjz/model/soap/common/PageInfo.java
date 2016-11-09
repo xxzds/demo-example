@@ -64,4 +64,11 @@ public class PageInfo {
 	public void setPageSize(int pageSize) {
 		this.pageSize = pageSize;
 	}
+	
+	@Override
+	public String toString() {
+		return "PageInfo [messageId=" + messageId + ", resultCode=" + resultCode + ", pageContents=" + pageContents
+				+ ", accessoryContents=" + accessoryContents + ", currentPage=" + currentPage + ", rowCount=" + rowCount
+				+ ", pageSize=" + pageSize + ", errors=" + errors + "]";
+	}
 }

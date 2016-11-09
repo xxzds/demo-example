@@ -12,6 +12,9 @@ public class AccessoryContentsErrorVO extends AccessoryContentsBaseVO {
 		this.errorInfo = errorInfo;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "AccessoryContentsErrorVO [errorInfo=" + errorInfo + "]";
+	}
 
 }

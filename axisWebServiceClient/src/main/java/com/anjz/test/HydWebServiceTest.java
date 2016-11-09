@@ -11,8 +11,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.anjz.model.PageContentsBaseVO1001;
+import com.anjz.model.PageContentsBaseVO1003;
+import com.anjz.model.PageContentsBaseVO1004;
+import com.anjz.model.PageContentsBaseVO1005;
 import com.anjz.model.RequestContent1001;
 import com.anjz.model.RequestContent1002;
+import com.anjz.model.RequestContent1003;
+import com.anjz.model.RequestContent1004;
+import com.anjz.model.RequestContent1005;
+import com.anjz.model.RequestContent1006;
 import com.anjz.model.soap.common.PageInfo;
 import com.anjz.util.Axis2Util;
 import com.anjz.util.UUIDGenerator;
@@ -41,8 +48,6 @@ public class HydWebServiceTest {
 			String bizType = "1001";
 			PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
 					requestContent1001, bizType, new PageContentsBaseVO1001(), null);
-			// 客户端VO名字不必和服务端一致，只要VO属性名字一致就OK！
-			System.out.println(pageInfo.getPageContents());
 			logger.debug(pageInfo+"");
 		} catch (Exception e) {
 			logger.error("", e);
@@ -83,36 +88,116 @@ public class HydWebServiceTest {
 	}
 	
 	/**
-	 * 充值接口
+	 * 充值接口（还款）
+	 * @throws Exception 
 	 */
 	@Test
-	public void axis2_1002_test(){
-		try {
-			// 指定参数值
-			RequestContent1002 rc = new RequestContent1002();
-			String bizType = "1002";
-			rc.setUserId("用户ID");
-			rc.setPayMerchantId("0c23d559fbb2425ab89aa7018d35ee0d");
-			rc.setPayAccount("付款方");
-			rc.setPayAccountName("付款名");
-			rc.setReceiveMerchantId("收款商户id");
-			rc.setReceiveAccount("收款方");
-			rc.setReceiveAccountName("收款名");
-			rc.setAmt("5000");
-			rc.setType("0");
-			rc.setFlag("1");
-			rc.setLoanTurnIds("42c7416930a14c9d82bbc4df44c0d2f2|a043b283a541451aabcf39a95a84a98f");
-			rc.setLoanTurnId("42c7416930a14c9d82bbc4df44c0d2f2");
-			rc.setChannel("00");
-			rc.setTranDes("123号码");
-			rc.setTranNo("123");
-			rc.setLoanTurnId("c37dc3e1d90b4642afe982d9c22451c7");
-			PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient", rc,
-					bizType, null, null);
-			logger.debug(pageInfo+"");
-		} catch (Exception e) {
-			logger.error("", e);
-		}
+	public void axis2_1002_test() throws Exception{
+		RequestContent1002 rc = new RequestContent1002();		
+		rc.setUserId("用户ID");
+		rc.setPayMerchantId("0c23d559fbb2425ab89aa7018d35ee0d");
+		rc.setPayAccount("付款方");
+		rc.setPayAccountName("付款名");
+		rc.setReceiveMerchantId("收款商户id");
+		rc.setReceiveAccount("收款方");
+		rc.setReceiveAccountName("收款名");
+		rc.setAmt("101");
+		rc.setType("0");
+		
+		//多笔
+//		rc.setFlag("1");
+//		rc.setLoanTurnIds("11d55becaabc4aa3aa49f33fb7066148");
+//		rc.setLoanTurnIds("42c7416930a14c9d82bbc4df44c0d2f2|a043b283a541451aabcf39a95a84a98f");
+		
+		
+		//单笔
+		rc.setFlag("2");
+		rc.setLoanTurnId("11d55becaabc4aa3aa49f33fb7066148");
+		rc.setChannel("00");		
+		rc.setTranNo("交易号");
+		rc.setTranDes("交易描述");
+		
+		String bizType = "1002";
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient", rc,
+				bizType, null, null);
+		logger.info(pageInfo.toString());
+	}
+	
+	/**
+	 * 支付接口(借款)
+	 * @throws Exception 
+	 */
+	@Test
+	public void axis2_1003_test() throws Exception{
+		RequestContent1003 rc1003=new RequestContent1003();
+		rc1003.setUserId("用户ID");
+		rc1003.setPayAccount("付款方");
+		rc1003.setPayAccountName("付款名");
+		rc1003.setPayMerchantId("付款商户id");
+		rc1003.setReceiveAccount("收款方");
+		rc1003.setReceiveAccountName("收款名");
+		rc1003.setReceiveMerchantId("收款商户id");
+		rc1003.setType("0");
+		rc1003.setAmt("100");
+		
+		String bizType = "1003";
+		
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+				rc1003, bizType, new PageContentsBaseVO1003(), null);
+		
+		logger.info(pageInfo.toString());
+	}
+	
+	/**
+	 * 慧易贷账户信息查询
+	 * @throws Exception 
+	 */
+	@Test
+	public void axis2_1004_test() throws Exception{
+		RequestContent1004 rc1004=new RequestContent1004();
+		rc1004.setUserId("用户ID");
+		String bizType = "1004";
+		
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+				rc1004, bizType, new PageContentsBaseVO1004(), null);
+		logger.info(pageInfo.toString());
+	}
+	
+	/**
+	 * 慧易贷还款/待还款查询
+	 * @throws Exception 
+	 * 
+	 */
+	@Test
+	public void axis2_1005_test() throws Exception{
+		RequestContent1005 rc1005=new RequestContent1005();
+		rc1005.setUserId("用户ID");
+		rc1005.setFlag(null);
+		rc1005.setCurrentPage("1");
+		rc1005.setPageSize("5");
+		
+		String bizType = "1005";
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+				rc1005, bizType, new PageContentsBaseVO1005(), null);
+		logger.info(pageInfo.toString());
+	}
+	
+	
+	/**
+	 * 慧易贷账户信息修改接口
+	 * @throws Exception
+	 */
+	@Test
+	public void axis2_1006_test() throws Exception{
+		RequestContent1006 rc1006 = new RequestContent1006();
+		rc1006.setUserId("用户ID");
+		rc1006.setUserName("XXZ");
+		rc1006.setMobileNo("18234567898");
+		
+		String bizType = "1006";
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+				rc1006, bizType, null, null);
+		logger.info(pageInfo.toString());
 	}
 
 }
