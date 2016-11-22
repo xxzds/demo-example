@@ -41,7 +41,7 @@ public class HydWebServiceTest {
 			// 指定方法的参数值
 			RequestContent1001 requestContent1001 = new RequestContent1001();
 			requestContent1001.setUserId("用户ID");
-			requestContent1001.setCreateTime("2016-11-03 16:30:15");
+			requestContent1001.setCreateTime("2016-11-017 16:30:15");
 			requestContent1001.setAcctName("XXZ");
 			requestContent1001.setMobileNo("18256915945");
 			requestContent1001.setTotalCredit("10000");
@@ -131,6 +131,8 @@ public class HydWebServiceTest {
 	public void axis2_1003_test() throws Exception{
 		RequestContent1003 rc1003=new RequestContent1003();
 		rc1003.setUserId("用户ID");
+		rc1003.setPayUniqueId("支付唯一标识");
+		rc1003.setPayTime("2016-11-17 12:00:01");
 		rc1003.setPayAccount("付款方");
 		rc1003.setPayAccountName("付款名");
 		rc1003.setPayMerchantId("付款商户id");
@@ -193,6 +195,8 @@ public class HydWebServiceTest {
 		rc1006.setUserId("用户ID");
 		rc1006.setUserName("XXZ");
 		rc1006.setMobileNo("18234567898");
+		//授信额度
+		rc1006.setTotalCredit("99999");
 		
 		String bizType = "1006";
 		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
