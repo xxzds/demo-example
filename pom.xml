@@ -9,6 +9,7 @@
   	<module>axis-demo</module>
   	<module>axisWebServiceClient</module>
   	<module>xxl-job-master</module>
+  	<module>jsch-demo</module>
   </modules>
   
   <properties>
