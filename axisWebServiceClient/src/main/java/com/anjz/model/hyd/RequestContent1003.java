@@ -1,4 +1,4 @@
-package com.anjz.model;
+package com.anjz.model.hyd;
 
 //慧易贷支付接口请求参数1003
 public class RequestContent1003 {

@@ -10,6 +10,7 @@
   	<module>axisWebServiceClient</module>
   	<module>xxl-job-master</module>
   	<module>jsch-demo</module>
+  	<module>uploadPlugin</module>
   </modules>
   
   <properties>
@@ -24,12 +25,7 @@
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
-		<dependency>  
-		    <groupId>org.slf4j</groupId>  
-		    <artifactId>slf4j-log4j12</artifactId>  
-		    <version>1.7.2</version>  
-		</dependency>  
+		  
   </dependencies>
   
   <build>

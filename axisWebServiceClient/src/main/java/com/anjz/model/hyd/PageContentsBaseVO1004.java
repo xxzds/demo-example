@@ -7,7 +7,7 @@
  * @类路径: com.usi.hyd.model.soap.account
  */
 
-package com.anjz.model;
+package com.anjz.model.hyd;
 
 import com.anjz.model.soap.common.PageContentsBaseVO;
 

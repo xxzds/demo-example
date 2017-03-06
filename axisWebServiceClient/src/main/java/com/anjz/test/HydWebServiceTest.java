@@ -10,27 +10,34 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.anjz.model.PageContentsBaseVO1001;
-import com.anjz.model.PageContentsBaseVO1003;
-import com.anjz.model.PageContentsBaseVO1004;
-import com.anjz.model.PageContentsBaseVO1005;
-import com.anjz.model.RequestContent1001;
-import com.anjz.model.RequestContent1002;
-import com.anjz.model.RequestContent1003;
-import com.anjz.model.RequestContent1004;
-import com.anjz.model.RequestContent1005;
-import com.anjz.model.RequestContent1006;
+import com.anjz.model.hyd.PageContentsBaseVO1001;
+import com.anjz.model.hyd.PageContentsBaseVO1003;
+import com.anjz.model.hyd.PageContentsBaseVO1004;
+import com.anjz.model.hyd.PageContentsBaseVO1005;
+import com.anjz.model.hyd.RequestContent1001;
+import com.anjz.model.hyd.RequestContent1002;
+import com.anjz.model.hyd.RequestContent1003;
+import com.anjz.model.hyd.RequestContent1004;
+import com.anjz.model.hyd.RequestContent1005;
+import com.anjz.model.hyd.RequestContent1006;
 import com.anjz.model.soap.common.PageInfo;
 import com.anjz.util.Axis2Util;
 import com.anjz.util.UUIDGenerator;
 import com.anjz.util.XMLDomUtil;
 
+/**
+ * 慧易贷接口测试
+ * @author shuai.ding
+ *
+ * @date 2016年12月9日下午5:01:14
+ */
 public class HydWebServiceTest {
 	
 	// 日志
 	private static Logger logger = LoggerFactory.getLogger(HydWebServiceTest.class);
 	
 	private String url = "http://localhost:8080/hydWebservice/services/MainServer?wsdl";
+	private String namespace = "http://server.web.hyd.usi.com";
 	
 	/**
 	 * 账户申请业务
@@ -46,7 +53,7 @@ public class HydWebServiceTest {
 			requestContent1001.setMobileNo("18256915945");
 			requestContent1001.setTotalCredit("10000");
 			String bizType = "1001";
-			PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+			PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient",
 					requestContent1001, bizType, new PageContentsBaseVO1001(), null);
 			logger.debug(pageInfo+"");
 		} catch (Exception e) {
@@ -118,7 +125,7 @@ public class HydWebServiceTest {
 		rc.setTranDes("交易描述");
 		
 		String bizType = "1002";
-		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient", rc,
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient", rc,
 				bizType, null, null);
 		logger.info(pageInfo.toString());
 	}
@@ -144,7 +151,7 @@ public class HydWebServiceTest {
 		
 		String bizType = "1003";
 		
-		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient",
 				rc1003, bizType, new PageContentsBaseVO1003(), null);
 		
 		logger.info(pageInfo.toString());
@@ -160,7 +167,7 @@ public class HydWebServiceTest {
 		rc1004.setUserId("用户ID");
 		String bizType = "1004";
 		
-		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient",
 				rc1004, bizType, new PageContentsBaseVO1004(), null);
 		logger.info(pageInfo.toString());
 	}
@@ -179,7 +186,7 @@ public class HydWebServiceTest {
 		rc1005.setPageSize("5");
 		
 		String bizType = "1005";
-		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient",
 				rc1005, bizType, new PageContentsBaseVO1005(), null);
 		logger.info(pageInfo.toString());
 	}
@@ -199,7 +206,7 @@ public class HydWebServiceTest {
 		rc1006.setTotalCredit("99999");
 		
 		String bizType = "1006";
-		PageInfo pageInfo = Axis2Util.getPageInfo(url, "http://server.web.hyd.usi.com", "RequestByClient",
+		PageInfo pageInfo = Axis2Util.getPageInfo(url, namespace, "RequestByClient",
 				rc1006, bizType, null, null);
 		logger.info(pageInfo.toString());
 	}

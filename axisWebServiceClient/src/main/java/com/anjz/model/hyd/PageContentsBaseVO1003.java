@@ -1,4 +1,4 @@
-package com.anjz.model;
+package com.anjz.model.hyd;
 
 import com.anjz.model.soap.common.PageContentsBaseVO;
 

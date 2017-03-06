@@ -1,4 +1,4 @@
-package com.anjz.model;
+package com.anjz.model.hyd;
 
 public class RequestContent1001 {
 	private String userId;//用户id
