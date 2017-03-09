@@ -8,15 +8,15 @@
 	  Web Uploader
 	</title>
 	<!--引入CSS-->
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
-	<link rel="stylesheet" type="text/css" href="static/plugin/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="static/plugin/webuploader-0.1.5/webuploader.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/plugin/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/plugin/webuploader-0.1.5/webuploader.css">
 
 <!-- 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 	
 	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 	<!--引入JS-->
-	<script type="text/javascript" src="static/plugin/webuploader-0.1.5/webuploader.js"></script>	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/plugin/webuploader-0.1.5/webuploader.js"></script>	
 </head>
 
 <body>
@@ -38,10 +38,10 @@
 		// 选完文件后，是否自动上传。
 	    auto: true,
 	    // swf文件路径
-	    swf: 'static/webuploader-0.1.5/Uploader.swf',
+	    swf: '${pageContext.request.contextPath}/static/webuploader-0.1.5/Uploader.swf',
 	
 	    // 文件接收服务端。
-	    server: 'ajaxUpload',
+	    server: '${pageContext.request.contextPath}/ajaxUpload',
 	
 	    // 选择文件的按钮。可选。
 	    // 内部根据当前运行是创建，可能是input元素，也可能是flash.

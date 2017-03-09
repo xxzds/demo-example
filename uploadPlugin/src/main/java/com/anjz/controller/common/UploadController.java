@@ -18,9 +18,9 @@ public class UploadController {
 	
 	private static final Logger logger =LoggerFactory.getLogger(UploadController.class);
 
-	@RequestMapping("toUploadPage{index}")
-	public String toUploadPage(@PathVariable("index") String index){
-		return "/upload/upload"+index;
+	@RequestMapping("/{pluginType}/toUploadPage{index}")
+	public String toUploadPage(@PathVariable("pluginType") String pluginType,@PathVariable("index") String index){
+		return "/upload/"+pluginType+"/upload"+index;
 	}
 	
 	
