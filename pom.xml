@@ -11,6 +11,7 @@
   	<module>xxl-job-master</module>
   	<module>jsch-demo</module>
   	<module>uploadPlugin</module>
+  	<module>itext-demo</module>
   </modules>
   
   <properties>
