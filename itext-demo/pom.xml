@@ -11,17 +11,30 @@
 	<dependencies>
 		<!-- 生成pdf -->
 		<!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
-		<dependency>
-			<groupId>com.itextpdf</groupId>
-			<artifactId>itextpdf</artifactId>
-			<version>5.2.0</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.itextpdf</groupId> -->
+<!-- 			<artifactId>itextpdf</artifactId> -->
+<!-- 			<version>5.2.0</version> -->
+<!-- 		</dependency> -->
 
-		<!-- <dependency>
-			<groupId>com.itextpdf</groupId>
-			<artifactId>itext-asian</artifactId>
-			<version>5.2.0</version>
-		</dependency> -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>com.itextpdf</groupId> -->
+<!-- 			<artifactId>itext-asian</artifactId> -->
+<!-- 			<version>5.2.0</version> -->
+<!-- 		</dependency> -->
+		
+			<!--PFD Itext -->
+		<dependency>
+		  <groupId>com.lowagie</groupId>
+		  <artifactId>itextasian</artifactId>
+		  <version>2.1.7</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>com.lowagie</groupId>
+		  <artifactId>text</artifactId>
+		  <version>2.1.7</version>
+		</dependency>
 
 	</dependencies>
 </project>

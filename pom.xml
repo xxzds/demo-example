@@ -12,6 +12,7 @@
   	<module>jsch-demo</module>
   	<module>uploadPlugin</module>
   	<module>itext-demo</module>
+  	<module>tech-sdk-eqb-demo</module>
   </modules>
   
   <properties>
