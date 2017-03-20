@@ -13,6 +13,7 @@
   	<module>uploadPlugin</module>
   	<module>itext-demo</module>
   	<module>tech-sdk-eqb-demo</module>
+  	<module>JMS-demo</module>
   </modules>
   
   <properties>
