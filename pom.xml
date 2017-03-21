@@ -14,6 +14,7 @@
   	<module>itext-demo</module>
   	<module>tech-sdk-eqb-demo</module>
   	<module>JMS-demo</module>
+  	<module>socket-demo</module>
   </modules>
   
   <properties>
