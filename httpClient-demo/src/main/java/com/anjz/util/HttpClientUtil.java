@@ -43,26 +43,25 @@ public class HttpClientUtil {
 			}
 		}
 		//模拟浏览器头部
-		httpPost.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-		httpPost.setHeader("Accept-Encoding", "gzip, deflate, sdch");
-		httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.8,en;q=0.6");
-		httpPost.setHeader("Connection", "keep-alive");
-		httpPost.setHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/53");
+//		httpPost.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
+//		httpPost.setHeader("Accept-Encoding", "gzip, deflate, sdch");
+//		httpPost.setHeader("Accept-Language", "zh-CN,zh;q=0.8,en;q=0.6");
+//		httpPost.setHeader("Connection", "keep-alive");
+//		httpPost.setHeader("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/53");
 		
-		
-
 		//请求头部
 		Header[] requestHeaders = httpPost.getAllHeaders();
 		for(Header h:requestHeaders){
 			System.out.println(h.getName() + ":" + h.getValue());
 		}
-		System.out.println("--------------------------------------------------");	
+		System.out.println("--------------------------------------------------");
+		
 		CloseableHttpResponse response = null;
 		try {
 			//设置编码格式，防止乱码
 			UrlEncodedFormEntity uefEntity = new UrlEncodedFormEntity(paramsList, "UTF-8");
 			httpPost.setEntity(uefEntity);
-			response = httpclient.execute(httpPost);
+			response = httpclient.execute(httpPost);	
 			
 			//响应头部
 			Header[] responseHeaders = response.getAllHeaders();

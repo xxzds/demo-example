@@ -21,8 +21,9 @@ public class HttpClientUtilTest {
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("name", URLEncoder.encode("你好", "utf-8"));
 		params.put("password", "h安徽");
-		String content = HttpClientUtil.doPost("http://localhost:9999/kj/test/ajax3", params);
-		System.out.println(content);
+//		String content = HttpClientUtil.doPost("http://localhost:9999/kj/test/ajax3", params);
+		String content = HttpClientUtil.doPost("http://www.xh99d.com", null);
+//		System.out.println(content);
 	}
 	
 	@Test
