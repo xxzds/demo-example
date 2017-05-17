@@ -30,6 +30,32 @@
 	</listener>
 	
 	
+	<!-- 拦截器 -->
+	<filter>
+		<filter-name>testFilter</filter-name>
+		<filter-class>com.anjz.web.filter.TestFilter</filter-class>
+		<init-param>
+			<param-name>testFilter1</param-name>
+			<param-value>filter1</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>include_url</param-name>
+			<param-value>/myAccount/myAccount.jsp,/consumer/consumerList.jsp,/myAccount/toStore.action,/hyd/hydInit.action</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>exclude_url</param-name>
+			<param-value>/login/,/wx/,/nosession/</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>testFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	
 	<servlet>
 		<servlet-name>myServlet</servlet-name>
 		<servlet-class>com.anjz.web.servlet.MyServlet</servlet-class>
