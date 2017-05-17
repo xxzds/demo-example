@@ -19,6 +19,11 @@ public class CustomListener implements ServletContextListener{
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(CustomListener.class);
 
+    public CustomListener() {
+		LOGGER.info("CustomListener new");
+	}
+	
+	
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		

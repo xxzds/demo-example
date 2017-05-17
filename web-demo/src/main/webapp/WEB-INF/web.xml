@@ -29,6 +29,10 @@
 		<listener-class>com.anjz.web.listener.CustomListener</listener-class>
 	</listener>
 	
+	<listener>
+		<listener-class>com.anjz.web.listener.MySessionListener</listener-class>
+	</listener>
+	
 	
 	<!-- 拦截器 -->
 	<filter>
@@ -66,8 +70,15 @@
 		<load-on-startup>0</load-on-startup>
 	</servlet>
 	
+	<servlet>
+		<servlet-name>testServlet</servlet-name>
+		<servlet-class>com.anjz.web.servlet.TestServlet</servlet-class>
+	</servlet>
 	
-	
+	<servlet-mapping>
+		<servlet-name>testServlet</servlet-name>
+		<url-pattern>/test.do</url-pattern>
+	</servlet-mapping>
 	
 	
 	<welcome-file-list>
