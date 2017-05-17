@@ -17,6 +17,7 @@
   	<module>JMS-demo</module>
   	<module>socket-demo</module>
   	<module>httpClient-demo</module>
+  	<module>web-demo</module>
   </modules>
   
   <properties>
