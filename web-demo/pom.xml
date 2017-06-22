@@ -32,6 +32,23 @@
 
 	</dependencies>
 
+	<!-- 发布管理 -->
+	<distributionManagement>
+		<repository>
+			<id>nexus-release</id>
+			<name>Project release repository</name>
+			<url>http://www.tooklili.com:81/nexus/content/repositories/releases</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>nexus-snapshot</id>
+			<name>Project snapshot repositories</name>
+			<url>http://www.tooklili.com:81/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+	
+
 	<build>
 
 		<finalName>web-demo</finalName>
