@@ -18,6 +18,7 @@
   	<module>socket-demo</module>
   	<module>httpClient-demo</module>
   	<module>web-demo</module>
+  	<module>cookie_demo</module>
   </modules>
   
   <properties>
