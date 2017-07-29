@@ -19,6 +19,9 @@
   	<module>httpClient-demo</module>
   	<module>web-demo</module>
   	<module>cookie_demo</module>
+  	<module>dubbo-provider</module>
+  	<module>dubbo-consumer</module>
+  	<module>dubbo-parent</module>
   </modules>
   
   <properties>
