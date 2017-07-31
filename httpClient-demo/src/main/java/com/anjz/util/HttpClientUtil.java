@@ -23,7 +23,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 /**
- * 
+ * 4.5.2
  * @author ding.shuai
  * @date 2017年4月9日下午5:39:29
  */

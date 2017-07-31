@@ -6,10 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.anjz.util.HttpClientUtil;
 
 public class HttpClientUtilTest {
+	private static final Logger LOGGER = LoggerFactory.getLogger(HttpClientUtilTest.class);
 
 	/**
 	 * http请求，get和post 参数都会进行url编码
@@ -22,13 +25,13 @@ public class HttpClientUtilTest {
 		params.put("name", URLEncoder.encode("你好", "utf-8"));
 		params.put("password", "h安徽");
 //		String content = HttpClientUtil.doPost("http://localhost:9999/kj/test/ajax3", params);
-		String content = HttpClientUtil.doPost("http://www.xh99d.com", null);
-//		System.out.println(content);
+		String content = HttpClientUtil.doPost("https://www.xh99d.com", null);
+		LOGGER.info(content);
 	}
 	
 	@Test
 	public void getTest(){
-		String content = HttpClientUtil.doGet("http://localhost:9999/kj/test/ajax1?name=你好");;
+		String content = HttpClientUtil.doGet("https://www.tooklili.com:8447/test");;
 		System.out.println(content);
 	}
 	
