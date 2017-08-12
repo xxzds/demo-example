@@ -22,6 +22,7 @@
   	<module>dubbo-provider</module>
   	<module>dubbo-consumer</module>
   	<module>dubbo-parent</module>
+  	<module>json-demo</module>
   </modules>
   
   <properties>
