@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PageInfo>
+  <MessageId>b3c4398f50744f94b180612c307ede89</MessageId>
+  <ResultCode>0</ResultCode>
+  <PageContents>
+    <Transaction>
+      <messageId/>
+      <accountId>55ab43917ae64de0b15a0792ca9a1eb7</accountId>
+      <creater>安庆销售沈亮亮</creater>
+      <createTime>2017-09-06 16:42:52</createTime>
+      <vehiclePlate>皖HB4619</vehiclePlate>
+      <vehicleColor>1</vehicleColor>
+      <vehicleType>14</vehicleType>
+      <businessId>01e9bbb562834370a21cdf565ed440ed</businessId>
+      <cardId>f95a57efcaa54af397b98c70085b0bc0</cardId>
+      <ecardNo>1030230219074015</ecardNo>
+      <ecardStatus>1</ecardStatus>
+      <dotName>芜湖货车卡客服中心</dotName>
+      <itemName>A套餐</itemName>
+      <vehicleModel>福田牌BJ1129VJPED_FD</vehicleModel>
+      <vehicleCode>LVBV5PBB2GE036965</vehicleCode>
+      <totalWeight>12095</totalWeight>
+      <limitWeight>0</limitWeight>
+      <axleNum>5</axleNum>
+      <licensePath>/upload/image/20170906/20170906164057_977.png</licensePath>
+      <accountName>王小言皖HB4619</accountName>
+      <relationName>王小言</relationName>
+      <mobile>15155622198</mobile>
+      <itemId>754f0687930e4b7fae8cb5b97a48ead2</itemId>
+      <debt>0</debt>
+      <deposit>0</deposit>
+      <penalty>0</penalty>
+      <serveFee>0</serveFee>
+      <ecardIdCPU>19074015</ecardIdCPU>
+      <endTime>2027-09-05 12:09:00</endTime>
+      <startTime>2017-09-06 12:09:00</startTime>
+      <handlingCharge>0</handlingCharge>
+      <remark/>
+      <userId>shenlianglaing</userId>
+      <dotId>c4c679a65a734b2cb5ce21a0d88d665b</dotId>
+      <accountStatus>1</accountStatus>
+      <companyName/>
+    </Transaction>
+  </PageContents>
+  <AccessoryContents/>
+  <CurrentPage>1</CurrentPage>
+  <RowCount>1</RowCount>
+  <PageSize>1</PageSize>
+  <Errors/>
+</PageInfo>

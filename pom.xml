@@ -23,6 +23,8 @@
   	<module>dubbo-consumer</module>
   	<module>dubbo-parent</module>
   	<module>json-demo</module>
+  	<module>xml-demo</module>
+  	<module>freemarker-demo</module>
   </modules>
   
   <properties>
