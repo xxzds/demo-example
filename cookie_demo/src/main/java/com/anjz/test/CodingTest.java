@@ -7,7 +7,7 @@ public class CodingTest {
 		
 		byte[] gbkBytes = str.getBytes("gbk");
 		for(byte gbkByte:gbkBytes){
-			//字节对应的十进制是负数，因二进制高位为1，如下进行补码操作，最后转化成16进制
+			//字节对应的十进制是负数，因java中的二进制使用补码表示的，此处使用0xff 还原成int表示的数据，再转化成16进制
 			System.out.print(Integer.toHexString((gbkByte & 0xFF)) +",");
 		}
 		System.out.println();
